@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 2rem;
+  font-family: $font-family-sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: $uoc-bg;
+  color: $uoc-corporate;
+}
+
+.uoc-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 2rem;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.uoc-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  max-width: 200px;
+  height: auto;
+
+  @media (min-width: $mqMinWidth) {
+    max-width: none;
+  }
+}
+
+.uoc-title {
+  font-family: $font-family-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: $uoc-corporate;
+
+  @media (min-width: $mqMinWidth) {
+    font-size: 36px;
+  }
+}
+
+.uoc-footer {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+@supports not (display: grid) {
+  @layer components {
+    main {
+      @apply max-w-full p-4;
+    }
+
+    h1 {
+      @apply mb-4 text-xl;
+    }
+
+    img {
+      @apply w-full h-auto mb-4;
+    }
+
+    .descripcio {
+      @apply flex items-center justify-center mt-4 text-center;
+    }
+
+    @media (min-width: 42em) and (min-height: 27em) {
+      main {
+        @apply flex flex-wrap;
+      }
+      h1 {
+        @apply w-full;
+      }
+      .img {
+        @apply order-first w-full;
+      }
+
+      .descripcio {
+        @apply w-full;
+      }
+    }
+  }
+}
+
+@supports (display: grid) {
+  @media (min-width: 42em) and (min-height: 27em) {
+    @layer components {
+      main {
+        @apply grid grid-rows-[20vh_50vh_20vh_10vh] max-w-none p-0;
+      }
+
+      h1 {
+        @apply z-10 row-start-1 row-end-2 col-start-2 col-end-6 pl-1 mb-0 text-sm md:text-esp;
+      }
+
+      .img {
+        @apply row-start-1 row-end-4 col-start-1 col-end-4;
+      }
+
+      .descripcio {
+        @apply grid-rows-2 col-start-5 col-end-6 self-end pb-4 mb-0;
+      }
+    }
+  }
+}

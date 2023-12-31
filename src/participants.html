@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./assets/styles/main.scss"
+        />
+        <title>Membres de le Lliga de Tenis</title>
+    </head>
+    <body>
+        <header  class="flex items-center justify-between p-5 text-white bg-blue-500">
+            <div class="block cursor-point"><i class="fas fa-bars"></i></div>
+            <a href="#">
+                <img
+                    class="h-10"
+                    src="./assets/images/istockphoto.jpg"
+                    alt="Logo"
+                />
+            </a>
+            <nav>
+                <ul  class="flex justify-end p-0 m-0 list-none">
+                    <li  class="mx-2">
+                        <a href="index.html">
+                            <include
+                            src="views/button.html"
+                            locals='{
+                            "text": "Inici"
+                        }'
+                        ></include>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <include
+                            src="views/button.html"
+                            locals='{
+                            "text": "Participants"
+                        }'
+                        ></include>
+                        </a>
+                    </li>                
+                </ul>
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="member">
+                <include
+                src="views/members.html"
+                locals='{
+                "text": "Està considerada com la millor tennista de la zona en molt de temps.",
+                "title": "Jugadora 1",
+                "link": "./assets/images/deportista_chica.png",
+                "alt": "Presidenta"
+            }'
+            ></include>
+            </div>
+            <div class="member">
+
+                <include
+                src="views/members.html"
+                locals='{
+                "text": "Ha estat guanyadora, no només, d´altres tornetjos de la zona si no també de les comarques del voltant.",
+                "title": "Jugadora 2",
+                "link": "./assets/images/deportista_chica.png",
+                "alt": "Jugadora 2"
+            }'
+            ></include>
+            </div>
+            <div class="member">
+                <include
+                src="views/members.html"
+                locals='{
+                "text": "És la més jova de les tres que particient en aquesta lligueta. També es la primera vegada que hi parcicipa.",
+                "title": "Jugadora 3",
+                "link": "./assets/images/deportista_chica.png",
+                "alt": "Jugadora 3"
+            }'
+            ></include>
+            </div>
+            <div class="member">
+                <include
+                src="views/members.html"
+                locals='{
+                "text": "Com a juvenil va guanyar diferent tornetjos de la zona.",
+                "title": "Jugador 1",
+                "link": "./assets/images/deportista_chico.png",
+                "alt": "Jugador 1"
+            }'
+            ></include>
+            </div>
+            <div class="member">
+                <include
+                src="views/members.html"
+                locals='{
+                "text": "Es un dels tennistes més reconeguts de la zona. Ha participat en tornetjos a reu de Catalunya",
+                "title": "Jugador 2",
+                "link": "./assets/images/deportista_chico.png",
+                "alt": "Jugador 2"
+            }'
+            ></include>
+            </div>
+            <div class="member">
+                <include
+                src="views/members.html"
+                locals='{
+                "text": "El més baterà dels tres. S´ha format a Madrid.",
+                "title": "Jugador 3",
+                "link": "./assets/images/deportista_chico.png",
+                "alt": "Jugador 3"
+            }'
+            ></include>
+            </div>
+        </div>
+        <include src="./views/footer.html"></include>
+        <script type="module" src="./assets/scripts/main.js"></script>
+    </body>
+</html>
